@@ -1,1 +1,37 @@
-/* All styles for your header Components live here */
+
+.HeaderContainer {
+  width: 564px;
+  display: flex;
+  font-size: 14px;
+}
+
+.ImageThumbnail {
+  margin-right: 10px;
+}
+
+.ImageThumbnail img {
+  width: 48px;
+  height: 48px;
+}
+
+
+.HeaderContainer__right {
+  display: flex;
+  flex-direction: column;
+}
+
+.HeaderTitle {
+  margin-bottom: 6px;
+}
+
+.HeaderTitle__name {
+  font-weight: bold;
+}
+
+.HeaderTitle__handle {
+  color: #657786;
+}
+
+.HeaderTitle__date {
+  color: #657786
+}
