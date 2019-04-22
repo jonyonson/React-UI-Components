@@ -43,9 +43,7 @@
 
 .CardBanner img {
   width: 100%;
-  border-top-left-radius: 0.
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
 }
 
-.CardContent {
-  /* color: black; */
-}
