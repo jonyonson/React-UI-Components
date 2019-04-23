@@ -26,6 +26,8 @@ class App extends React.Component {
   }
 
   handleNumClick(n) {
+    // if there is already an n1 and an n2, update the display and n2 with
+    // most recent nums
     if (this.state.n1 !== null && this.state.n2 !== null) {
       return this.setState(previousState => {
         const display = Number(previousState.display.toString() + String(n));
@@ -33,11 +35,16 @@ class App extends React.Component {
       });
     }
 
+    // if there is already an n1 but no n2, update n2 and display states
     if (this.state.n1 !== null && this.state.n2 === null) {
       return this.setState(previousState => {
         return { n2: n, display: n };
       });
     }
+
+    // take the previous display from previous state and the most recent num
+    // clicked and convert them to strings to update the state of the display
+    // convert back to a number before returning the new state.display
     return this.setState(previousState => {
       const display = Number(previousState.display.toString() + String(n));
       return { display };
