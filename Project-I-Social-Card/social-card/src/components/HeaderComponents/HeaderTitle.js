@@ -8,10 +8,10 @@ function HeaderTitle() {
       <span className="HeaderTitle__name">Lambda School </span>
       <span className="HeaderTitle__handle">@LambdaSchool</span> ·
       <span className="HeaderTitle__date">
-        {' '}
+        {` `}
         {moment()
-          .startOf('hour')
-          .fromNow()}
+          .format('DD MMM')
+          .toLowerCase()}
       </span>
     </div>
   );
