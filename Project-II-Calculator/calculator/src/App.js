@@ -25,7 +25,7 @@ class App extends React.Component {
     });
   }
 
-  changeDisplay(n) {
+  handleNumClick(n) {
     if (this.state.n1 !== null && this.state.n2 !== null) {
       return this.setState(previousState => {
         const display = Number(previousState.display.toString() + String(n));
@@ -118,33 +118,33 @@ class App extends React.Component {
           </ButtonRow>
 
           <ButtonRow>
-            <NumberButton changeDisplay={() => this.changeDisplay(7)} number={7} />
-            <NumberButton changeDisplay={() => this.changeDisplay(8)} number={8} />
-            <NumberButton changeDisplay={() => this.changeDisplay(9)} number={9} />
+            <NumberButton handleNumClick={() => this.handleNumClick(7)} number={7} />
+            <NumberButton handleNumClick={() => this.handleNumClick(8)} number={8} />
+            <NumberButton handleNumClick={() => this.handleNumClick(9)} number={9} />
             <ActionButton handleAction={() => this.handleAction('multiplication')}>
               &times;
             </ActionButton>
           </ButtonRow>
 
           <ButtonRow>
-            <NumberButton changeDisplay={() => this.changeDisplay(4)} number={4} />
-            <NumberButton changeDisplay={() => this.changeDisplay(5)} number={5} />
-            <NumberButton changeDisplay={() => this.changeDisplay(6)} number={6} />
+            <NumberButton handleNumClick={() => this.handleNumClick(4)} number={4} />
+            <NumberButton handleNumClick={() => this.handleNumClick(5)} number={5} />
+            <NumberButton handleNumClick={() => this.handleNumClick(6)} number={6} />
             <ActionButton handleAction={() => this.handleAction('subtraction')}>
               &minus;
             </ActionButton>
           </ButtonRow>
 
           <ButtonRow>
-            <NumberButton changeDisplay={() => this.changeDisplay(1)} number={1} />
-            <NumberButton changeDisplay={() => this.changeDisplay(2)} number={2} />
-            <NumberButton changeDisplay={() => this.changeDisplay(3)} number={3} />
+            <NumberButton handleNumClick={() => this.handleNumClick(1)} number={1} />
+            <NumberButton handleNumClick={() => this.handleNumClick(2)} number={2} />
+            <NumberButton handleNumClick={() => this.handleNumClick(3)} number={3} />
             <ActionButton handleAction={() => this.handleAction('addition')}>&#x2B;</ActionButton>
           </ButtonRow>
 
           <ButtonRow>
             <NumberButton
-              changeDisplay={() => this.changeDisplay(0)}
+              handleNumClick={() => this.handleNumClick(0)}
               className={'FlexThree'}
               number={0}
             />
